@@ -17,7 +17,7 @@ class PhalconFrameworkPaginatorAdapterTest extends TestCase
         $resultset->next        = 4;
         $resultset->previous    = 2;
         $resultset->total_items = 50;
-        $resultset->total_pages = 10;
+        $resultset->last = 10;
 
         $adapter = new PhalconFrameworkPaginatorAdapter($resultset);
         $this->assertInstanceOf('League\Fractal\Pagination\PaginatorInterface', $adapter);
